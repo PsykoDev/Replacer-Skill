@@ -10,7 +10,7 @@ module.exports = [
 	{enabled: true, job: 0, group: 30, replace: 300930, instance: true, Description:"Scythe"},
 	{enabled: true, job: 0, group: 31, replace: 310830, instance: true, Description:"Reaping Slash"},
 	{enabled: true, job: 0, group: 36, replace: 360130, instance: true, Description:"Rain of Blows (Deadly Gamble)"},
-	{enabled: true, job: 0, group: 37, replace: 370100, instance: true, Description:"Blade Draw (Deadly Gamble)"},
+	{enabled: true, job: 0, group: 37, replace: 370130, instance: true, Description:"Blade Draw (Deadly Gamble)"},
 	{enabled: true, job: 0, group: 38, replace: 300930, instance: true, Description:"Scythe (Deadly Gamble)"},
 	{enabled: true, job: 0, group: 39, replace: 390130, instance: true, Description:"Traverse Cut (Defensive Stance)"},
 	{enabled: false, job: 0, group: 40, replace: 400122, instance: true, Description:"Blade Waltz -> auto-block"},

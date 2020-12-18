@@ -31,7 +31,7 @@ module.exports = function ReplacerSkill(mod) {
 		StartInstanceSkill(event)
 		return false
 	})
-	
+
 	function StartInstanceSkill(event) {
 		mod.send('C_START_INSTANCE_SKILL', 7, {
 			skill:     event.skill,

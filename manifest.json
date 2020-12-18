@@ -1,22 +1,8 @@
 {
     "files": {
-        "README.md": "e0fd175ed91f142eed37f0372a518ed710e6d7a9199b95642f1ea5cf54e859ff",
-        "class/0-warrior.tsv": "6a072efff35f47f21f0bacbf67b70c73484873b5bb394d01ad0ea55aae0e325f",
-        "class/1-lancer.tsv": "d712687caaf4f2794695d3d89f5071a65c8f6b208512270a245184a278fc7475",
-        "class/10-brawler-fighter.tsv": "d43d647c39b399389918b42aed1ce2dfcbc50482a3c5c76827cd66b12979b501",
-        "class/11-ninja-assassin.tsv": "b3a0dbd18cf12e35dcc866b02e7fc14aeadcb89ad5976acec8cf49ce213b2537",
-        "class/12-valkyrie-glaiver.tsv": "bb5eeeaee7044d3ea116ba6a69f3fb5b6996a0aafce6fc727d7454c04e050f2f",
-        "class/2-slayer.tsv": "5bb10a0bec5fe17d14c2e9d268c84805066741272eea10527fb592f760b0f6e5",
-        "class/3-berserker.tsv": "c0527fa23f426f61c34b9b8a7c006fe2bbbffa55ce44a60336e6af712fc252f2",
-        "class/4-sorcerer.tsv": "bda0fd33c1681d02291988ac5a32e69501a3965d2ba6b05267ddb463dcdde2aa",
-        "class/5-archer.tsv": "81cc55eb12ceb81460ee7e2fd5f07cf94ee711eb25d771407d327c1d0f4ab5f5",
-        "class/6-priest.tsv": "b3392c64268cab76702c0f9eb896afce28d01d9bfb164e2b004256d113b8415f",
-        "class/7-mystic.tsv": "66df95fc3806703494801f4efb2e209337dd531133580ac7c2540472d4fa4e26",
-        "class/8-reaper-soulless.tsv": "c3e90b1273b07206dfb9ca1e93bb2ed90ed8abedd8490a98a110ffd17f5902bc",
-        "class/9-gunner-engineer.tsv": "e3d8108e343eb5ad140b8f8d99733c94a893bc8991d09566e8eb557af03a504a",
-        "index.js": "05a12b30e81ded4ab706e52294b7688e7e38a56feb1d5900e708c8e7217ecbef",
+        "index.js": "0ba2c5cb76b4166f8827617306313d8bf7bdc90e403ce7a33ba89b8bda61884a",
         "module.json": "5f4c1b07ea8c5b20381b2101098aca37e5088def7608d66f6e6e7ba4444ccab3",
-        "skills.js": "deefebfc5a3c632e17ba9d5bf17f2169b3a9efb1b12a45f4bf39be5ca2974c73"
+        "skills.js": "63014e99465ecb1954c78fbec4a5fe80d47cf6a23840422c4ca4e34fbb7e7998"
     },
     "defs": {
         "C_START_COMBO_INSTANT_SKILL": 6,
