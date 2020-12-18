@@ -2,8 +2,11 @@
     "name": "Replacer-Skill",
     "options": {
         "niceName": "Replacer-Skill",
-        "guiName": "Replacer-Skill(技能替换)"
+        "guiName": "Replacer-Skill"
     },
-    "author": "ZC",
-    "description": "多职业 - 技能替换"
+    "author": "ZC, PsykoDev",
+    "description": "Multi-class-skill replacement",
+    "version": "101.2",
+    "servers": ["https://raw.githubusercontent.com/PsykoDev/Replacer-Skill/master/"],
+    "disableAutoUpdate": false
 }

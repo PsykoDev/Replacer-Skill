@@ -1,8 +1,10 @@
-# Replacer-Skill (与模组 skill-prediction 兼容)
+# Need more time to test
+
+# Replacer-Skill (Compatible with mod skill-prediction, Ping Remover, NGSP)
 
 ------
 
-/8频道 键入命令 | 效果说明
+/8 channel or ! Command | effect description
 --- | ---
-rs | 开启/关闭模组
-reload | 重新载入修改后的 skills.js 文件内容
+rs | Turn module on/off
+reload | reload the modified skills.js file content
