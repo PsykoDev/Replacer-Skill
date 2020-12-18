@@ -32,6 +32,20 @@ module.exports = function ReplacerSkill(mod) {
 		return false
 	})
 
+	mod.hook('S_ABNORMALITY_BEGIN', 4, event => {
+        if(event.id==100801){
+            SKILLS.find(obj => obj.job==job && obj.group==Math.floor(290900/10000)).replace = 370130 //BD 290900
+            SKILLS.find(obj => obj.job==job && obj.group==Math.floor(40900/10000)).replace = 360130 //RB 40900 
+        }
+    })
+
+    mod.hook('S_ABNORMALITY_END', 1, event => {
+        if(event.id==100801){
+            SKILLS.find(obj => obj.job==job && obj.group==Math.floor(290900/10000)).replace = 290930 //BD
+            SKILLS.find(obj => obj.job==job && obj.group==Math.floor(40900/10000)).replace = 40930 //RB   
+        }
+    })
+	
 	function StartInstanceSkill(event) {
 		mod.send('C_START_INSTANCE_SKILL', 7, {
 			skill:     event.skill,
