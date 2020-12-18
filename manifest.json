@@ -14,9 +14,9 @@
         "class/7-mystic.tsv": "66df95fc3806703494801f4efb2e209337dd531133580ac7c2540472d4fa4e26",
         "class/8-reaper-soulless.tsv": "c3e90b1273b07206dfb9ca1e93bb2ed90ed8abedd8490a98a110ffd17f5902bc",
         "class/9-gunner-engineer.tsv": "e3d8108e343eb5ad140b8f8d99733c94a893bc8991d09566e8eb557af03a504a",
-        "index.js": "a87060feeb649ffed0e6af1df84b5c82a1eb91e4f49cf015fb27d30108281758",
+        "index.js": "c230348e9caa4b2b7aa28cd033b2723300fdbb9f26345856d1750b0b74dff18e",
         "module.json": "5f4c1b07ea8c5b20381b2101098aca37e5088def7608d66f6e6e7ba4444ccab3",
-        "skills.js": "2dc63b7915c128fe00bf76f8ff9549fe6968e549293b484f5290a6c49d279c96"
+        "skills.js": "75cde6f82e2d086b768e312f878bd14a3e935fb5a791a560ddd3538745f9774d"
     },
     "defs": {
         "C_START_COMBO_INSTANT_SKILL": 6,

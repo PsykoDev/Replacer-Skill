@@ -36,13 +36,21 @@ module.exports = function ReplacerSkill(mod) {
         if(event.id==100801){
             SKILLS.find(obj => obj.job==job && obj.group==Math.floor(290900/10000)).replace = 370130 //BD 290900
             SKILLS.find(obj => obj.job==job && obj.group==Math.floor(40900/10000)).replace = 360130 //RB 40900 
-        }
+		}
+		if(event.id==10152342){
+            SKILLS.find(obj => obj.job==job && obj.group==Math.floor(90001/10000)).replace = 93112 //MM
+            SKILLS.find(obj => obj.job==job && obj.group==Math.floor(400001/10000)).replace = 400102 //RR 
+		}
     })
 
     mod.hook('S_ABNORMALITY_END', 1, event => {
         if(event.id==100801){
             SKILLS.find(obj => obj.job==job && obj.group==Math.floor(290900/10000)).replace = 290930 //BD
             SKILLS.find(obj => obj.job==job && obj.group==Math.floor(40900/10000)).replace = 40930 //RB   
+		}
+		if(event.id==10152342){
+            SKILLS.find(obj => obj.job==job && obj.group==Math.floor(90001/10000)).replace = 91012 //MM
+            SKILLS.find(obj => obj.job==job && obj.group==Math.floor(400001/10000)).replace = 400101 //RR     
         }
     })
 	
