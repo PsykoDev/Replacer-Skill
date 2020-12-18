@@ -63,6 +63,7 @@ module.exports = function ReplacerSkill(mod) {
 	function reloadModule(fileName) {
 		delete require.cache[require.resolve(fileName)]
 		console.log('Replacer-Skill: Reloading ' + fileName)
+		mod.command.message("Reloading: " + Enabled)
 		return require(fileName)
 	}
 	
