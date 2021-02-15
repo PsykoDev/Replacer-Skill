@@ -1,109 +1,108 @@
-/* 00 normal skill / 10 target skill / 30 buffed skill */
+// 00 normal skill / 10 target skill / 30 buffed skill
 module.exports = [
-//  {enabled: true, job: x, group:  x, replace: xxxxxx, instance: true, Description:""},
-	// 0-warrior 
-	{enabled: true, job: 0, group:  1, replace:  11200, instance: true, Description:"Combo Attack"},
-	{enabled: true, job: 0, group:  4, replace: 40930, instance: true, Description:"Rain of Blows 2edge + AS"},
-	{enabled: false, job: 0, group: 19, replace: 191101, instance: true, Description:"Rising Fury -> last hit"},
-	{enabled: true, job: 0, group: 28, replace: 390130, instance: true, Description:"Traverse Cut"},
-	{enabled: true, job: 0, group: 29, replace: 290930, instance: true, Description:"Blade Draw 2 edge + AS"},
-	{enabled: true, job: 0, group: 30, replace: 380130, instance: true, Description:"Scythe"},
-	{enabled: true, job: 0, group: 31, replace: 310830, instance: true, Description:"Reaping Slash"},
-	{enabled: false, job: 0, group: 36, replace: 360130, instance: true, Description:"Rain of Blows (Deadly Gamble)"},
-	{enabled: false, job: 0, group: 37, replace: 370130, instance: true, Description:"Blade Draw (Deadly Gamble)"},
-	{enabled: true, job: 0, group: 38, replace: 380130, instance: true, Description:"Scythe (Deadly Gamble)"},
-	{enabled: true, job: 0, group: 39, replace: 390130, instance: true, Description:"Traverse Cut (Defensive Stance)"},
-	{enabled: false, job: 0, group: 40, replace: 400122, instance: true, Description:"Blade Waltz -> auto-block"},
-	{enabled: false, job: 0, group: 41, replace: 410131, instance: true, Description:"Aerial Scythe -> last hit"},
-	{enabled: true, job: 0, group: 42, replace: 420130, instance: true, Description:"Blade Frenzy -> cast speed"},
-	// 1-lancer 
-	{enabled: true, job: 1, group:  1, replace:  11200, instance: true, Description:"Combo Attack -> Fist hit"},
-	{enabled: true, job: 1, group:  3, replace:  30200, instance: true, Description:"Onslaught  -> accelerate"},
-	{enabled: true, job: 1, group:  5, replace:  50130, instance: true, Description:"Shield Bash   -> accelerate"},
-	{enabled: true, job: 1, group: 10, replace: 100330, instance: true, Description:"Debilitate -> Buffed"},
-	{enabled: true, job: 1, group: 13, replace: 131130, instance: true, Description:"Spring Attack  -> accelerate"},
-	{enabled: true, job: 1, group: 18, replace: 181101, instance: true, Description:"Shield Barrage  -> last hit no CD"},
-	{enabled: true, job: 1, group: 21, replace: 210402, instance: true, Description:"Lockdown Blow  -> accelerate"},
-	{enabled: true, job: 1, group: 25, replace: 251030, instance: true, Description:"Wallop       -> accelerate"},
-	{enabled: true, job: 1, group: 28, replace: 280101, instance: true, Description:"Super Leap   -> accelerate"},
-	// 2-slayer 
-	{enabled: true, job: 2, group:  1, replace:  11200, instance: true, Description:"Combo Attack -> Fist hit"},
-	{enabled: true, job: 2, group:  2, replace:  21130, instance: true, Description:"Knockdown Strike    -> accelerate"},
-	{enabled: true, job: 2, group:  4, replace:  40200, instance: true, Description:"Evasive Roll  -> no CD"},
-	{enabled: true, job: 2, group:  8, replace:  81030, instance: true, Description:"Overhand Strike   -> accelerate"},
-	{enabled: true, job: 2, group: 12, replace: 121102, instance: true, Description:"Heart Thrust  -> accelerate"},
-    {enabled: true, job: 2, group: 23, replace: 230930, instance: true, Description:"Measured Slice   -> accelerate"},
-	{enabled: true, job: 2, group: 24, replace: 240930, instance: true, Description:"Eviscerate  -> accelerate"},
-	{enabled: true, job: 2, group: 25, replace: 250130, instance: true, Description:"Ultimate Overhand Strike -> accelerate"},
-	{enabled: true, job: 2, group: 26, replace: 260130, instance: true, Description:"Punishing Blow        -> accelerate"},
-	// 3-berserker 
+// 0-warrior 
+{ job: 0, group: 1, enabled: true, to: 11200, instance: true, replace: true}, //Warrior -> always 1st hit of auto attack
+{ job: 0, group: 4, enabled: true, to: 360130, instance: true, replace: true}, //Warrior -> Rain of Blows -> Deadly Gamble Buff + SpeedCast
+{ job: 0, group: 19, enabled: false, to: 191101, instance: true, replace: true}, //Warrior -> Rising Fury SpeddCast
+{ job: 0, group: 28, enabled: true, to: 390130, instance: true, replace: true}, //Warrior -> Traverse Cut SpeddCast
+{ job: 0, group: 29, enabled: true, to: 370130, instance: true, replace: true}, //Warrior -> Blade Draw -> Deadly Gamble Buff + SpeedCast
+{ job: 0, group: 30, enabled: true, to: 380130, instance: true, replace: true}, //Warrior -> Scythe Buff + SpeedCast
+{ job: 0, group: 31, enabled: true, to: 310830, instance: true, replace: true}, //Warrior -> Reaping Slash SpeedCast
+{ job: 0, group: 36, enabled: true, to: 360130, instance: true, replace: true}, //Warrior -> Deadly Gamble Rain of Blows SpeedCast
+{ job: 0, group: 37, enabled: true, to: 370130, instance: true, replace: true}, //Warrior -> Deadly Gamble Blade Draw SpeedCast
+{ job: 0, group: 38, enabled: true, to: 380130, instance: true, replace: true}, //Warrior -> Deadly Gamble Scythe SpeedCast
+{ job: 0, group: 39, enabled: true, to: 390130, instance: true, replace: true}, //Warrior -> Traverse Cut SpeddCast + (Defensive Stance)
+{ job: 0, group: 40, enabled: false, to: 400122, instance: true, replace: true}, //Warrior -> Blade Waltz No CD
+{ job: 0, group: 41, enabled: false, to: 410131, instance: true, replace: true}, //Warrior -> Aerial Scythe No CD (2nd Hit)
+{ job: 0, group: 42, enabled: true, to: 420130, instance: true, replace: true}, //Warrior -> Blade Frensy SpeedCast
+// 1-lancer 
+{ job: 1, group: 3, enabled: true, to: 30200, instance: true, replace: true}, //Lancer -> Onslaught SpeedCast
+{ job: 1, group: 5, enabled: true, to: 50130, instance: true, replace: true}, //Lancer -> Shield Bash SpeedCast
+{ job: 1, group: 10, enabled: true, to: 100330, instance: true, replace: true}, //Lancer -> Debilitate SpeedCast
+{ job: 1, group: 13, enabled: true, to: 131130, instance: true, replace: true}, //Lancer -> Spring Attack SpeedCast
+{ job: 1, group: 18, enabled: true, to: 181101, instance: true, replace: true}, //Lancer -> Shield Barrage SpeedCast + No CD
+{ job: 1, group: 25, enabled: true, to: 251030, instance: true, replace: true}, //Lancer -> Wallop SpeedCast
+{ job: 1, group: 28, enabled: true, to: 280101, instance: true, replace: true}, //Lancer -> Super Leap SpeedCast
+// 2-slayer 
+{ job: 2, group: 1, enabled: true, to: 11200, instance: true, replace: true}, //Slayer -> always 1st hit of auto attack
+{ job: 2, group: 2, enabled: true, to: 21330, instance: true, replace: true}, //Slayer -> KDS SpeedCast
+{ job: 2, group: 4, enabled: true, to: 40200, instance: true, replace: true}, //Slayer -> No CD I-Frame
+{ job: 2, group: 8, enabled: true, to: 81130, instance: true, replace: true}, //Slayer -> OHS SpeedCast
+{ job: 2, group: 12, enabled: true, to: 121102, instance: true, replace: true}, //Slayer -> HT SpeedCast
+{ job: 2, group: 23, enabled: true, to: 230830, instance: true, replace: true}, //Slayer -> MS SpeedCast
+{ job: 2, group: 24, enabled: true, to: 240830, instance: true, replace: true}, //Slayer -> Eviscerate SpeedCast
+{ job: 2, group: 25, enabled: true, to: 250130, instance: true, replace: true}, //Slayer -> UOHS SpeedCast
+{ job: 2, group: 26, enabled: true, to: 260130, instance: true, replace: true}, //Slayer -> Punishing Blow SpeedCast
+// 3-berserker 
 
-	// 4-sorcerer 
-	{enabled: true, job: 4, group:  4, replace: 330112, instance: true, Description:"Arcane Pulse"},
-	{enabled: true, job: 4, group:  6, replace: 320100, instance: true, Description:"Meteor Strike"},
-	{enabled: true, job: 4, group: 34, replace: 340230, instance: true, Description:"Mana Boost"},
-	{enabled: true, job: 4, group: 36, replace: 360600, instance: true, Description:"Fusion"},
-	// 5-archer 
+// 4-sorcerer 
+{ job: 4, group: 36, enabled: true, to: 360600, instance: true, replace: true}, //Sorc -> Fusion
+{ job: 4, group: 34, enabled: true, to: 340230, instance: true, replace: true}, //Sorc -> Mana Boost (not for replacing purposes)
+{ job: 4, group: 6, enabled: true, to: 320100, instance: true, replace: true}, //Sorc -> Fireblast -> Apex
+{ job: 4, group: 4, enabled: true, to: 330112, instance: true, replace: true}, //Sorc -> Arcane Pulse -> Apex
+// 5-archer 
 
-	// 6-priest 
-	{enabled: true, job: 6, group:  3, replace:  30730, instance: true, Description:"Healing Circle  -> Buffed"},
-	{enabled: true, job: 6, group: 11, replace: 111102, instance: true, Description:"Metamorphic Blast   -> Buffed"},
-	{enabled: true, job: 6, group: 16, replace: 161121, instance: true, Description:"Shocking Implosion   -> Buffed"},
-	{enabled: true, job: 6, group: 27, replace: 271121, instance: true, Description:"Final Reprisal   -> Buffed"},
-	{enabled: true, job: 6, group: 40, replace: 401020, instance: true, Description:"Zenobia's Vortex    -> Buffed"},
-	{enabled: true, job: 6, group: 42, replace: 420130, instance: true, Description:"Holy Burst   -> Buffed"},
-	// 7-mystic 
-	// {enabled: true, job: x, group:  x, replace: xxxxxx, instance: true, Description:""},
-
-	// 8-reaper 
-	{enabled: true, job: 8, group:  3, replace:  30341, instance: true, Description:"Double Shear -> Buffed"},
-	{enabled: true, job: 8, group:  4, replace:  40331, instance: true, Description:"Sundering Strike"},
-	{enabled: true, job: 8, group:  5, replace:  50332, instance: true, Description:"Grim Strike"},
-	{enabled: true, job: 8, group:  6, replace:  60242, instance: true, Description:"Death Spiral -> second hit"},
-	{enabled: true, job: 8, group:  8, replace:  80230, instance: true, Description:"Whipsaw"},
-	{enabled: true, job: 8, group: 10, replace: 100230, instance: true, Description:"Pendulum Strike"},
-	{enabled: true, job: 8, group: 11, replace: 110203, instance: true, Description:"Shadow Lash    -> instante charge no CD"},
-	{enabled: true, job: 8, group: 12, replace: 120231, instance: true, Description:"Shadow Burst"},
-	{enabled: true, job: 8, group: 15, replace: 150380, instance: true, Description:"Retribution     -> second hit Buffed"},
-	{enabled: true, job: 8, group: 40, replace: 400100, instance: true, Description:"Shadow Step   -> Fist hit no CD"},
-	// 9-gunner 
-	{enabled: true, job: 9, group:  1, replace: 420101, instance: true, Description:"Blast"},
-	{enabled: true, job: 9, group:  5, replace:  51021,    combo: true, Description:"Burst Fire"},
-	{enabled: true, job: 9, group:  9, replace:  93112, instance: true,Description:"Mana Missiles"},
-	{enabled: true, job: 9, group: 11, replace: 110831, instance: true, Description:"Rocket Jump   -> 2 steps buff"},
-	{enabled: true, job: 9, group: 13, replace: 440101, instance: true,Description:"Balder's Vengeance"},
-	{enabled: true, job: 9, group: 40, replace: 400102, instance: true, Description:"Rolling Reload / Dashing Reload"},
-	{enabled: true, job: 9, group: 43, replace: 430151, instance: true, Description:"Remote Trigger"},
-	// 10-brawler 
-	{enabled: true, job:10, group:  1, replace:  21201, instance: true, Description:"Punch -> Fist hit"},
-	{enabled: true, job:10, group:  4, replace:  41130, instance: true, Description:"Ground Pound"},
-	{enabled: true, job:10, group: 22, replace: 220130, instance: true, Description:"Flying Kick"},
-	{enabled: true, job:10, group: 24, replace: 240130, instance: true, Description:"(One-Inch) Punch   -> 2 stage acceleration"},
-	{enabled: true, job:10, group: 26, replace: 260102, instance: true, Description:"Rhythmic Blows"},
-	{enabled: true, job:10, group: 40, replace: 400100, instance: true, Description:"Quick Dash"},
-	// 11-ninja 
-	{enabled: true, job:11, group:  1, replace: 150732, instance: true, Description:"Combo Attack -> Fist hit", autoRepeat: false},
-	{enabled: true, job:11, group:  2, replace:  20100, instance: true, Description:"Shadow Jump -> Fist hit"},
-	{enabled: true, job:11, group:  3, replace:  30840, instance: true, Description:"Leaves on the Wind"},
-	{enabled: true, job:11, group:  8, replace:  80252, instance: true, Description:"Fire Avalanche"},
-	{enabled: true, job:11, group: 21, replace: 210112, instance: true, Description:"Boomerang Shuriken"},
-	{enabled: true, job:11, group: 22, replace: 220140, instance: true, Description:"Quick Attack"},
-	// 12-valkyrie 
-	{enabled: true, job:12, group: 1, replace: 10103, instance: true, Description:"Slash Last hit", autoRepeat: false},
-	{enabled: true, job:12, group: 2, replace: 25730, instance: true, Description:"Overhead Slash buffed"},
-	{enabled: true, job:12, group: 3, replace: 35930, instance: true, Description:"Glaive Strike buffed"},
-	{enabled: true, job:12, group: 5, replace: 55530, instance: true, Description:"Maelstrom buffed"},
-	{enabled: true, job:12, group: 6, replace: 66230, instance: true, Description:"Leaping Slash buffed"},
-	{enabled: true, job:12, group: 7, replace: 70902, instance: true, Description:"Leaping Strike last hit"},
-	{enabled: true, job:12, group: 8, replace: 85101, instance: true, Description:"Titansbane"},
-	{enabled: true, job:12, group: 9, replace: 96130, instance: true, Description:"Ground Bash Buffed"},
-	{enabled: true, job:12, group: 10, replace: 106130, instance: true, Description:"Dream Slash buffed"},
-	{enabled: true, job:12, group: 13, replace: 136130, instance: true, Description:"Bloodflower buffed"},
-	{enabled: true, job:12, group: 14, replace: 140100, instance: true, Description:"Evasion no CD"},
-	{enabled: true, job:12, group: 15, replace: 156130, instance: true, Description:"Windslash buffed"},
-	{enabled: true, job:12, group: 16, replace: 166230, instance: true, Description:"Runeburst"},
-	{enabled: true, job:12, group: 21, replace: 215100, instance: true, Description:"Dark Herald Buffed"},
-	{enabled: true, job:12, group: 23, replace: 235102, instance: true, Description:"Gungnir’s Bite - Fist hit"},
-	{enabled: false, job:12, group: 24, replace: 245102, instance: true, Description:"Twilight Waltz -> Fist hit"},
-	{enabled: false, job:12, group: 25, replace: 250132, instance: true, Description:"Godsfall -> Fist hit"}
+// 6-priest 
+{ job: 6, group: 3, enabled: true, to: 30730, instance: true, replace: true}, //Priest -> Healing Circle Buff + SpeedCast
+{ job: 6, group: 11, enabled: true, pve: true, to: 111101, to_pve: 111102, instance: true, replace: true}, //Priest -> Metamorphic Blast -> SpeedCast (set pve to true for Apex buff)
+{ job: 6, group: 16, enabled: true, pve: true, to: 161111, to_pve: 161121, instance: true, replace: true}, //Priest -> Shocking Implosion -> SpeedCast (set pve to true for Apex buff)
+{ job: 6, group: 27, enabled: true, pve: true, to: 271111, to_pve: 271121, instance: true, replace: true}, //Priest -> Final Reprisal -> SpeedCast (set pve to true for Apex buff)
+{ job: 6, group: 40, enabled: true, pve: true, to: 401010, to_pve: 401020, instance: true, replace: true}, //Priest -> Zenobias Vortex -> SpeedCast (set pve to true for Apex buff)
+{ job: 6, group: 42, enabled: true, to: 0, instance: true, replace: false}, //Priest -> HolyBurst
+// 7-mystic 
+{ job: 7, group: 25, enabled: true, to: 250330, instance: true, replace: true}, //Myst -> Thrall of Protection
+{ job: 7, group: 27, enabled: true, to: 271330, instance: true, replace: true}, //Myst -> Thrall of Life
+{ job: 7, group: 33, enabled: true, to: 331230, instance: true, replace: true}, //Myst -> Thrall of Vengeance
+{ job: 7, group: 34, enabled: true, to: 340730, instance: true, replace: true}, //Myst -> Thrall of Wrath
+// 8-reaper 
+{ job: 8, group: 3, enabled: true, to: 30341, instance: true, replace: true}, //Reaper -> Double Shear SpeedCast
+{ job: 8, group: 4, enabled: true, to: 40331, instance: true, replace: true}, //Reaper -> Sundering Strike -> Apex
+{ job: 8, group: 5, enabled: true, to: 50332, instance: true, replace: true}, //Reaper -> Grim Strike SpeedCast
+{ job: 8, group: 6, enabled: true, to: 60242, instance: true, replace: true}, //Reaper -> Death Spiral No CD
+{ job: 8, group: 8, enabled: true, to: 80230, instance: true, replace: true}, //Reaper -> Whipsaw SpeedCast
+{ job: 8, group: 10, enabled: true, to: 100230, instance: true, replace: true}, //Reaper -> Pendulum Strike SpeedCast
+{ job: 8, group: 11, enabled: true, to: 110203, instance: true, replace: true}, //Reaper -> Shadow Lash SpeedCast + No CD
+{ job: 8, group: 12, enabled: true, to: 120231, instance: true, replace: true}, //Reaper -> Shadow Burst -> Apex
+{ job: 8, group: 15, enabled: true, to: 150380, instance: true, replace: true}, //Reaper -> Retribution -> Insta 2nd Hit (2x2nd Hit)
+{ job: 8, group: 40, enabled: true, to: 400100, instance: true, replace: true}, //Reaper -> No CD I-Frame
+// 9-gunner 
+{ job: 9, group: 1, enabled: true, to: 420101, instance: true, replace: true}, //Gunner -> Blast to Detonate (Apex)
+{ job: 9, group: 5, enabled: true, to: 51021, combo: true, replace: true}, //Gunner -> Burst Fire -> Targeted Burst Fire
+{ job: 9, group: 9, enabled: true, adv: true, to: 91012, to_adv: 93112, instance: true, replace: true}, //Gunner -> Mana Missiles
+{ job: 9, group: 11, enabled: true, to: 110831, instance: true, replace: true}, //Gunner -> Rocket Jump -> 2 steps buff
+{ job: 9, group: 13, enabled: true, to: 440101, instance: true, replace: true}, //Gunner -> Balders -> Apex
+{ job: 9, group: 40, enabled: true, dash: true, to: 400101, to_dash: 400102, instance: true, replace: true}, //Gunner -> No CD I-frame
+{ job: 9, group: 43, enabled: true, to: 430151, instance: true, replace: true}, //Gunner -> Remote Trigger -> Apex Remote Trigger (No CD)
+// 10-brawler 
+{ job: 10, group: 1, enabled: true, to: 21201, instance: true, replace: true}, //Brawler -> Punch to Stagger
+{ job: 10, group: 4, enabled: true, to: 41130, instance: true, replace: true}, //Brawler -> Ground Punder SpeedCast
+{ job: 10, group: 22, enabled: true, to: 220130, instance: true, replace: true}, //Brawler -> Flying Kick SpeedCast
+{ job: 10, group: 24, enabled: true, to: 240130, instance: true, replace: true}, //Brawler -> (One-Inch) Punch   -> 2 stage acceleration
+{ job: 10, group: 26, enabled: true, to: 260102, instance: true, replace: true}, //Brawler -> Rhythmic Blows No CD
+{ job: 10, group: 40, enabled: true, to: 400100, instance: true, replace: true}, //Brawler -> No CD I-Frame
+// 11-ninja 
+{ job: 11, group: 1, enabled: true, to: 150732, instance: true, replace: true}, //Ninja -> Auto Attack to Harmonious Burst Fire (No CD)
+{ job: 11, group: 2, enabled: true, to: 20100, instance: true, replace: true}, //Ninja -> No CD I-Frame
+{ job: 11, group: 3, enabled: true, to: 30840, instance: true, replace: true}, //Ninja -> Leaves on the Wind -> Apex Buff
+{ job: 11, group: 8, enabled: true, to: 80252, instance: true, replace: true}, //Ninja -> Fire Avalanche -> Apex Buff
+{ job: 11, group: 21, enabled: true, to: 210113, instance: true, replace: true}, //Ninja -> Boomerang Shuriken -> Apex Buff (No CD)
+{ job: 11, group: 22, enabled: true, to: 220140, instance: true, replace: true}, //Ninja -> Quick Attack -> Apex Buff
+// 12-valkyrie 
+{ job: 12, group: 1, enabled: true, to: 10103, instance: true, replace: true}, //Valk -> Slash Last hit
+{ job: 12, group: 2, enabled: true, to: 25730, instance: true, replace: true}, //Valk -> Overhead Slash buffed
+{ job: 12, group: 3, enabled: true, to: 35930, instance: true, replace: true}, //Valk -> Glaive Strike buffed
+{ job: 12, group: 5, enabled: true, to: 55530, instance: true, replace: true}, //Valk -> Maelstrom buffed
+{ job: 12, group: 6, enabled: true, to: 66230, instance: true, replace: true}, //Valk -> Leaping Slash buffed
+{ job: 12, group: 7, enabled: true, to: 70902, instance: true, replace: true}, //Valk -> Leaping Strike last hit
+{ job: 12, group: 8, enabled: true, to: 85101, instance: true, replace: true}, //Valk -> TitansBane No CD
+{ job: 12, group: 9, enabled: true, to: 96130, instance: true, replace: true}, //Valk -> Ground Bash Buffed
+{ job: 12, group: 10, enabled: true, to: 106130, instance: true, replace: true}, //Valk -> Dream Slash buffed
+{ job: 12, group: 13, enabled: true, to: 136130, instance: true, replace: true}, //Valk -> Bloodflower buffed
+{ job: 12, group: 14, enabled: true, to: 140100, instance: true, replace: true}, //Valk -> Evasion no CD
+{ job: 12, group: 15, enabled: true, to: 245103, instance: true, replace: true}, //Valk -> WindSlash to Twilight Waltz 2nd Hit No CD
+{ job: 12, group: 16, enabled: true, to: 166230, instance: true, replace: true}, //Valk -> RuneBurst SpeedCast
+{ job: 12, group: 21, enabled: true, to: 215100, instance: true, replace: true}, //Valk -> Dark Herald Buffed
+{ job: 12, group: 23, enabled: true, to: 235102, instance: true, replace: true}, //Valk -> Gungnir's Bite No CD
+{ job: 12, group: 24, enabled: false, to: 245102, instance: true, replace: true}, //Valk -> Twilight Waltz 1st Hit No CD
+{ job: 12, group: 25, enabled: false, to: 250132, instance: true, replace: true} //Valk -> Godsfall 2nd hit No CD (no buff)
 ]

@@ -1,12 +1,12 @@
 {
-    "name": "Replacer-Skill",
+    "name": "TSR",
     "options": {
-        "niceName": "Replacer-Skill",
-        "guiName": "Replacer-Skill"
+        "niceName": "TSR",
+        "guiName": "TSR"
     },
     "author": "ZC, PsykoDev",
     "description": "Multi-class-skill replacement",
-    "version": "101.2",
+    "version": "102.2",
     "servers": ["https://raw.githubusercontent.com/PsykoDev/Replacer-Skill/master/"],
     "disableAutoUpdate": false
 }
